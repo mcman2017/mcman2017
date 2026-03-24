@@ -1,55 +1,82 @@
 # Anthony McAniff
 
-**AI Platform Engineer | Kubernetes | Agentic AI | Infrastructure as Code**
+**Senior AI Platform Engineer | NVIDIA DGX SPARK | 8-Node Kubernetes + 16TB Rook-Ceph | Agentic AI**
 
-I build AI-native infrastructure — designing and deploying production Kubernetes clusters, agentic AI systems, and cloud platforms for enterprise environments. My work sits at the intersection of infrastructure engineering and applied AI, where I use tools like Claude Code and MCP-based agent architectures to manage and automate complex systems.
-
-Currently focused on agentic AI platform engineering: building autonomous agent pipelines, deploying LLM-powered workflows on Kubernetes, and helping organizations adopt AI-assisted development at scale.
+Founder, [Blue Sail Technologies](https://theclamlife.com) — AI infrastructure consulting
 
 ---
 
-### What I'm Building
+10+ years building production systems across every layer of the stack — from 800-line Perl automation on UNIX, to a 1,000+ line production React/Node.js monitoring platform at Tradeweb, to enterprise Ansible/OpenShift/OpenStack automation at IBM/Kyndryl (air-gapped datacenters, multi-DC patching, self-healing infrastructure), to what I'm building now: an 8-node Kubernetes cluster with an **NVIDIA DGX SPARK running local 30B parameter model inference** and 16TB NVMe Rook-Ceph distributed storage.
 
-- **Claw Brain** — A TypeScript agentic AI system with dual-storage memory (short-term + long-term), MCP tool integration, SMS channel interface, and Kubernetes-native deployment. Demonstrates real-world agent design patterns: context management, tool orchestration, and persistent state across conversations.
+I passed **4 of 5 Meta SWE final-round interviews** (both coding, networking, team fit). I adopted agentic AI coding 9 months ago and now build AI-native applications daily with Claude Code.
 
-- **AI Blog Automation Pipeline** — End-to-end content pipeline: automated topic research, Gemini API content generation, editorial review, and publishing — all orchestrated via Helm charts on a self-managed Kubernetes cluster. A reference architecture for AI-driven content workflows.
+**I don't just use AI tools — I build and operate AI infrastructure.**
 
-- **Kubernetes Home Lab (Production-Grade)** — Multi-node K8s cluster built on ARM64 Turing RK1 hardware. Rook-Ceph distributed storage, etcd HA, control-plane + worker topology, full cluster teardown/rebuild for disaster recovery testing. This is where I prototype infrastructure patterns before taking them to enterprise clients.
+---
 
-- **Claude Code + K8s Integration** — Exploring AI-assisted infrastructure management: using Claude Code for cluster operations, manifest generation, debugging, and deployment automation.
+### What I'm Running
+
+**The Cluster:** 8-node Kubernetes on Turing RK1 ARM64 hardware + NVIDIA DGX SPARK as AI worker node. 16TB NVMe Rook-Ceph distributed storage. etcd HA. Helm + Terraform deployments. This is where I build, test, and deploy everything below.
+
+**Hybrid AI Inference:** Local models up to 30B parameters on DGX SPARK for latency-sensitive and private workloads. Cloud APIs (Claude, Gemini, GPT-4o) for general-purpose tasks. Multi-tier inference architecture — the same pattern enterprise AI platform teams build at scale.
+
+---
+
+### Projects
+
+**[Claw Brain](https://github.com/mcman2017/claw-brain)** — TypeScript agentic AI system. Monorepo architecture with dual-storage memory (short-term context + long-term knowledge), MCP tool integration, SMS channel interface, and Kubernetes-native deployment. Real-world agent design patterns: context management, tool orchestration, persistent state across conversations.
+
+**[Asteroids](https://games.theclamlife.com)** — Browser-based game built entirely with agentic AI coding (Claude Code). Demonstrates AI-assisted development workflow from concept to deployed application.
+
+**AI Blog Automation Pipeline** — End-to-end content pipeline: automated research → Gemini API generation → editorial review → publishing. Orchestrated via Helm charts on the K8s cluster. Reference architecture for AI-driven content workflows.
+
+**[n8n Automation Platform](https://n8n.theclamlife.com)** — Self-hosted n8n workflow automation on Kubernetes. Building automated pipelines for content, monitoring, and infrastructure management.
+
+**K8s Deployment Manifests** — Helm charts, Terraform configs, and Kubernetes manifests from the 8-node cluster. Rook-Ceph storage configs, DGX SPARK node integration, workload scheduling patterns.
+
+**Spiderweb** *(Tradeweb, 2018)* — 1,000+ line production React/Node.js real-time FIX connection monitoring tool. Connected to distributed Oracle database with Outlook alerting integration. Monitored client trading feeds for Goldman Sachs, Morgan Stanley, BlackRock, and Wells Fargo. Achieved 99.999% connection uptime.
 
 ---
 
 ### Tech Stack
 
-**Infrastructure:** Kubernetes, Helm, Rook-Ceph, Terraform, Ansible, ArgoCD, OpenShift, Podman, Docker
-
-**Cloud:** AWS, Azure, GCP | Azure VMware Solution, Azure Government Cloud, AWS VPC
-
-**AI & Agents:** Claude Code, Anthropic API, Gemini API, OpenAI GPT-4o, MCP (Model Context Protocol), RAG, Qdrant
-
-**Languages:** TypeScript, Python, JavaScript, React/Next.js, Node.js
-
-**Data:** PostgreSQL, MariaDB, Snowflake, Redshift, Apache Kafka, Kinesis
-
-**Security:** CyberArk, HIPAA compliance automation, quantum-resistant cryptography research (PostQSQL)
+| Layer | Technologies |
+|-------|-------------|
+| **AI Infrastructure** | NVIDIA DGX SPARK (30B local inference), Claude Code, Anthropic API, Gemini API, OpenAI GPT-4o, MCP, RAG, Qdrant |
+| **Kubernetes** | 8-node K8s (ARM64 + DGX SPARK), Helm, Rook-Ceph (16TB NVMe), etcd HA, OpenShift, ArgoCD, Podman |
+| **Cloud & IaC** | AWS, Azure (AVS, Gov Cloud), GCP, Terraform, Ansible Tower, Pulumi, Red Hat Satellite |
+| **Languages** | TypeScript, Python, JavaScript, React/Next.js, Node.js, Perl, Bash, C++, Java |
+| **Enterprise** | Air-gapped datacenters, Puppet, self-healing infrastructure, HIPAA compliance, CyberArk, quantum-resistant cryptography |
+| **Data** | PostgreSQL, MariaDB, Snowflake, Redshift, Apache Kafka, Oracle, Db2 |
+| **Financial** | FIX protocol, Bloomberg TOMS/ETOMS, low-latency trading systems, DTCC blockchain settlement |
 
 ---
 
-### Background
+### Career Arc
 
-19 years in financial services and enterprise infrastructure — from low-latency FIX trading systems at Tradeweb and Fidessa to large-scale cloud migrations at IBM and Kyndryl. VP-level production engineering, enterprise architecture, and client-facing AI consulting for Fortune 100 companies.
+```
+2007-2015  Fidessa Trading    → Perl/UNIX, FIX protocol, HFT connections, IPO support (JPM, Deutsche Bank)
+2015-2019  Tradeweb Markets   → VP Production Eng. Built Spiderweb (React/Node.js). Goldman, Morgan Stanley clients
+2019       Axoni              → Blockchain startup (Goldman/JPM-backed). AWS, DTCC clearing
+2019-2024  IBM → Kyndryl      → Enterprise architect. Ansible Tower, OpenShift, OpenStack, air-gapped DCs, 30K+ VMs
+2022       Meta Interviews    → Passed 4/5 final round SWE (coding ✓, coding ✓, networking ✓, team fit ✓)
+2024-now   Blue Sail Tech     → Founded. 8-node K8s + DGX SPARK + 16TB Rook-Ceph. Agentic AI builder
+```
 
-M.S. Computer Science, Stevens Institute of Technology | GPA 3.75, Dean's Honor List
+**M.S. Computer Science** — Stevens Institute of Technology | GPA 3.75 | Dean's Honor List
 
 ---
 
-### Let's Connect
+### Connect
 
-- **LinkedIn:** [linkedin.com/in/anthonymcaniff](https://linkedin.com/in/anthonymcaniff)
 - **Website:** [theclamlife.com](https://theclamlife.com)
+- **Games:** [games.theclamlife.com](https://games.theclamlife.com)
+- **Automation:** [n8n.theclamlife.com](https://n8n.theclamlife.com)
+- **LinkedIn:** [linkedin.com/in/anthony-mcaniff](https://linkedin.com/in/anthony-mcaniff)
 - **Email:** emp2011emp@gmail.com
 
 ---
 
-*I use AI to build infrastructure, and I build infrastructure for AI.*
+*I build infrastructure for AI, and I use AI to build infrastructure.*
+
+*Open to remote Senior AI Platform Engineer, AI Infrastructure, and Staff Infrastructure roles.*
